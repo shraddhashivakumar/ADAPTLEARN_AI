@@ -1,0 +1,11 @@
+{
+  "name": "ai-tutor-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix adaptlearn-backend\" \"npm run dev --prefix adaptlearn-frontend\""
+  }
+}
