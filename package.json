@@ -1,11 +1,41 @@
 {
-  "name": "ai-tutor-monorepo",
+  "name": "adaptlearn-api",
   "version": "1.0.0",
-  "private": true,
-  "devDependencies": {
-    "concurrently": "^7.6.0"
-  },
+  "description": "Adaptive Learning Backend API (Person 2) with Prisma, JWT Auth, and OpenAI integration",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix adaptlearn-backend\" \"npm run dev --prefix adaptlearn-frontend\""
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "migrate": "npx prisma migrate dev",
+    "generate": "npx prisma generate",
+    "studio": "npx prisma studio",
+    "seed": "npx prisma db seed"
+  },
+  "keywords": [
+    "express",
+    "prisma",
+    "jwt",
+    "openai",
+    "adaptive-learning",
+    "supabase",
+    "backend-api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.14.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "openai": "^4.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "prisma": "^6.14.0"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   }
 }
